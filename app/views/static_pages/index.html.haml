@@ -23,11 +23,13 @@
 	%br
 	%h3 List All Cat Facts
 	%b GET    
-	= '/api/v1/facts.json'
+	%code= '/api/v1/facts.json?page=:page'
 	%br
 	%br
 	%p
-		Get a paginated list of cat facts.  If page is ommited, it defaults to 1.
+		Get a paginated list of cat facts.  If page is ommited, it defaults to 1.  Replace 
+		%code :page 
+		with the page of results you want.
 	%b Response Codes
 	%br
 	200: Successfully fetched them
@@ -57,7 +59,7 @@
 	%br
 	%h3 Create a New Cat Fact
 	%b POST    
-	= '/api/v1/facts.json'
+	%code= '/api/v1/facts.json'
 	%br
 	%br 
 	Example post body:
