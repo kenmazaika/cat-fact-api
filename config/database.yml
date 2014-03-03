@@ -17,10 +17,14 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: cat-facts_development
+  database: catfacts_development
   pool: 5
-  username: cat-facts
-  password:
+  <% if ENV["BOXEN_POSTGRESQL_PORT"].blank? %>
+  username: postgres
+  password: password
+  <% end %>
+  port: <%= ENV["BOXEN_POSTGRESQL_PORT"] || 5432 %>
+  host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -46,15 +50,12 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: cat-facts_test
+  database: catfacts_development
   pool: 5
-  username: cat-facts
-  password:
+  <% if ENV["BOXEN_POSTGRESQL_PORT"].blank? %>
+  username: postgres
+  password: password
+  <% end %>
+  port: <%= ENV["BOXEN_POSTGRESQL_PORT"] || 5432 %>
+  host: localhost
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: cat-facts_production
-  pool: 5
-  username: cat-facts
-  password:
