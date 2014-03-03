@@ -23,13 +23,23 @@
 	%br
 	%h3 List All Cat Facts
 	%b GET    
-	%code= '/api/v1/facts.json?page=:page'
+	%code= '/api/v1/facts.json?page=:page&per_page=:per_page'
 	%br
 	%br
 	%p
-		Get a paginated list of cat facts.  If page is ommited, it defaults to 1.  Replace 
+		Get a paginated list of cat facts.  
+		%br
+		%br
+		%b Parameters:
+		%br
+		If page is ommited, it defaults to 1.  Replace 
 		%code :page 
 		with the page of results you want.
+		%br
+		%b Optional
+		specify
+		%code per_page
+		to specify how many results per page, otherwise defaults to 25.
 	%b Response Codes
 	%br
 	200: Successfully fetched them
@@ -81,6 +91,7 @@
 	201: Successfully created the fact
 	%br
 	422: Failed to create the item
+	%br
 	%br
 	%b Example Response
 	%br

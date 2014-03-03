@@ -1,6 +1,6 @@
 class Api::V1::FactsController < ApplicationController
 	def index
-		facts = Fact.page(params[:page] || 1)
+		facts = Fact.page(params[:page] || 1).per(params[:per_page])
 		render :json => {
 			:page        => params[:page] || 1,
 			:total       => facts.total_count,
