@@ -4,6 +4,12 @@ CatFacts::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
+  namespace :api do
+    namespace :v1, :format => :json do
+      resources :facts, :only => [:index, :create]
+    end
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

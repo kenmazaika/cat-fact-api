@@ -50,7 +50,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: catfacts_development
+  database: catfacts_test
   pool: 5
   <% if ENV["BOXEN_POSTGRESQL_PORT"].blank? %>
   username: postgres

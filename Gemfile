@@ -32,7 +32,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :test do
+	gem 'factory_girl_rails'
+
+end
+
 gem 'haml'
+gem 'kaminari'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
