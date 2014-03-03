@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/antho1404/bootstrap-sass-rails.git
+  revision: 515d855edc2a28940b25fd537b27ca5ddd75d45d
+  branch: develop
+  specs:
+    bootstrap-sass-rails (3.0.2.1)
+      railties (>= 3.1.0)
+      sass-rails (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -118,6 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass-rails!
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   haml

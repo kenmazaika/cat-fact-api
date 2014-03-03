@@ -1,3 +1,98 @@
-GET  /api/v1/facts(.:format) api/v1/facts#index
+.cat-hero
+	%br
+	%br
+	%br
+
+
+	.col-xs-10.col-xs-offset-1.light-frosty.col-sm-4.col-sm-offset-7
+
+		%h1 The #1 Cat Fact API
+
+		%h2
+			Because...
+			= Fact.order("RANDOM()").first.details
+	
 %br
-POST /api/v1/facts(.:format) api/v1/facts#create
+%br
+.col-xs-10.col-xs-offset-1
+	The CatFacts API is the most robust cat fact api on the net.  We proudly announce we have
+	= Fact.count
+	awesome facts in our comprehensive cat fact database.
+
+	%br
+	%br
+	%h3 List All Cat Facts
+	%b GET    
+	= '/api/v1/facts.json'
+	%br
+	%br
+	%p
+		Get a paginated list of cat facts.  If page is ommited, it defaults to 1.
+	%b Response Codes
+	%br
+	200: Successfully fetched them
+	%br
+	%br
+	%b Example Response
+	%br
+	%br
+	%pre
+		%code
+			:plain
+				{
+				    "page": 1,
+				    "total": 1,
+				    "total_pages": 1,
+				    "facts": [
+				        {
+				            "id": 1,
+				            "details": "All cats are lactose-intolerant",
+				            "created_at": "2014-03-03T19:21:51.727Z",
+				            "updated_at": "2014-03-03T19:21:51.727Z"
+				        }
+				    ]
+				}
+
+	%br
+	%br
+	%h3 Create a New Cat Fact
+	%b POST    
+	= '/api/v1/facts.json'
+	%br
+	%br 
+	Example post body:
+	%pre
+		%code
+			:plain
+				{
+					"fact" : {
+						"details" : "All cats are lactose-intolerant"
+					}
+
+				}
+
+	%br
+	%p
+		Adds a cat fact to the database.
+	%b Response Codes
+	%br
+	201: Successfully created the fact
+	%br
+	422: Failed to create the item
+	%br
+	%b Example Response
+	%br
+	%br
+
+	%pre
+		%code
+			:plain
+				{
+				   "id": 1,
+				   "details": "All cats are lactose intolerant",
+				   "created_at": "2014-03-03T19:21:51.727Z",
+				   "updated_at": "2014-03-03T19:21:51.727Z"
+				}
+
+
+

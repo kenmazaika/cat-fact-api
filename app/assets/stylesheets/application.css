@@ -8,6 +8,70 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
+ *= require twitter/bootstrap
  *= require_tree .
+ *= require_self
+
  */
+
+
+.navbar.navbar-inverse {
+background-color: rgba(0,0,0,0.5) !important;
+height: 50px;
+min-height: 50px;
+width: 100%;
+position: absolute;
+border-radius: 0px;
+background: url("/assets/escheresque_ste.png") !important;
+}
+
+
+.navbar.navbar-inverse a, 
+.navbar-inverse .navbar-nav > li > a {
+	font-family:'Helvetica Neue', Helvetica, sans-serif;
+	font-weight:200;
+	color:#EEEEEE;
+}
+.cat-hero {
+	background: url('/assets/bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+box-shadow: 0px 3px 8px #2a2a2a;
+	height:500px;
+}
+
+.light-frosty {
+background: rgba(0,0,0,0.3);
+padding-top: 10px;
+padding-bottom: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2{
+	font-weight: 100;
+font-size: 34px;
+line-height:40px;
+letter-spacing: -1px;
+color: #eeeeee;
+text-shadow: rgba(0,0,0,0.95) 1px 1px;
+vertical-align: top;
+line-height: 38px;
+color:white;
+
+}
+
+h2 {
+	font-size: 32px;
+
+}
+
+body {
+	background-image:url('fabric_of_squares_gray.png');
+}

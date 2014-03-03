@@ -39,6 +39,7 @@ end
 
 gem 'haml'
 gem 'kaminari'
+gem 'bootstrap-sass-rails', :github => 'antho1404/bootstrap-sass-rails', :branch => 'develop'
 
 
 # Use ActiveModel has_secure_password

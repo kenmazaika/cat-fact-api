@@ -12,7 +12,7 @@ class Api::V1::FactsController < ApplicationController
 	def create
 		fact = Fact.create(fact_params)
 		if fact.valid?
-			render :json => fact
+			render :json => fact, :status => :created
 		else
 			render :json => fact.errors, 
 				:status => :unprocessable_entity
