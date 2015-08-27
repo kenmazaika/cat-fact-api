@@ -1,10 +1,10 @@
-== CatFacts API
+## CatFacts API
 
 Welcome to the CatFacts API.  The world's premier API for finding facts about cats!
 
 Sadly this API is not secure yet.  
 
-=== Details
+### Details
 
 All requests should include the following query parameters:
 
@@ -14,7 +14,7 @@ All requests should include the following query parameters:
 
 Any timestamp older than 2 minutes should be refused.
 
-=== Client Details
+### Client Details
 
 Let's say your boss told you there's a client with these details:
 
