@@ -21,3 +21,11 @@ Let's say your boss told you there's a client with these details:
 * **Public Key:** `charlie_kelly`
 * **Secret Key:** `k1tten_m1tt3ns`
 
+
+### To run the app
+
+```
+bundle exec rake db:create:all
+bundle exec rake db:migrate
+bundle exec rake db:seed
+```

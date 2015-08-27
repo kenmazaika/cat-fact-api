@@ -19,8 +19,22 @@
 	= Fact.count
 	awesome facts in our comprehensive cat fact database.
 
-	%br
-	%br
+	%h3 Authorization
+
+	%p All requests should include the following query parameters:
+	%ul
+		%li
+			%code t
+			= " - the timestamp as an Unix Timestamp Integer"
+		%li 
+			%code client
+			= " - the public key"
+		%li 
+			%code token
+			= " - SHA256 hash of the users secret key and the timestamp they generated the request"
+
+	%p Any timestamp older than 2 minutes should be refused.
+
 	%h3 List All Cat Facts
 	%b GET    
 	%code= '/api/v1/facts.json?page=:page&per_page=:per_page'
